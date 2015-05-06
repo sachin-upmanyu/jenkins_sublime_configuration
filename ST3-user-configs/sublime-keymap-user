@@ -1,0 +1,5 @@
+[
+    {"keys": ["ctrl+shift+/"], "command": "duplicate_line", "args": { "block": true }},
+    {"keys": ["ctrl+shift+d"], "command": "toggle_comment"},
+    {"keys": ["tab"], "command": "indent"},
+]

@@ -1,0 +1,62 @@
+<!-- Install commands are for RHEL distributions -->
+
+<!--------------------------------------- preparing system start ---------------------------------------------->
+yum install php-devel php-pear gcc gcc-c++ autoconf automake <!-- needed for xdebug -->
+
+pecl install Xdebug <!-- needed for phpunit -->
+
+<!-- add to php.ini -->
+[xdebug]
+zend_extension="/usr/lib64/php/modules/xdebug.so"
+xdebug.remote_enable = 1
+
+<!-- restart apache -->
+service httpd restart
+
+<!-- make sure to have php >= 5.4 -->
+<!-- in centos install epel && remi repo -->
+wget http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm
+
+<!-- update php packages with remi-php55(php 5.5) -->
+yum --enablerepo=remi-php55,remi update php\*
+
+<!-- Install GIT -->
+yum install git
+
+
+<!-------------------------------------- preparing system end ---------------------------------------------->
+
+
+<!-------------------------------------- Install Jenkins start -------------------------------------------->
+
+<!-- get jenkins centos(or relevant) repo from https://jenkins-ci.org/views/hudson-tutorials -->
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+yum install jenkins
+
+<!-- jenkins should be running now at port 8080 -->
+
+
+<!-- install tools and plugins follow: http://jenkins-php.org/installation.html -->
+    <!-- jenkins plugins install cli method -->
+    wget http://localhost:8080/jnlpJars/jenkins-cli.jar
+
+    java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin checkstyle cloverphp crap4j dry htmlpublisher jdepend plot pmd violations warnings xunit
+
+    java -jar jenkins-cli.jar -s http://localhost:8080 safe-restart
+
+    <!-- install php tools manually or through composer in one go, composer wasn't tested in this installation -->
+    <!-- NOTE: php tools need to be in the path -->
+
+
+<!-- install ANT, we are building projects and managing projects through ANT, alternative Maven(not tested) -->
+<!-- before ant make sure to install openjdk(not jre) if not installed. -->
+yum install java-1.6.0-openjdk.x86_64(or any latest version available in repo)
+yum install ant
+
+<!-------------------------------------- Install Jenkins end -------------------------------------------->
+
+
+

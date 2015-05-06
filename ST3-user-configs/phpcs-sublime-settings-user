@@ -1,0 +1,26 @@
+
+{
+    // Which file types (file extensions), do you want the plugin to
+    // execute for
+    "extensions_to_execute": ["php"],
+
+    // It seems python/sublime cannot always find the php application
+    // If empty, then use PATH version of php, else use the set value
+    "phpcs_php_path": "",
+
+    "phpcs_executable_path": "",
+
+    "php_cs_fixer_executable_path": "/usr/local/bin/php-cs-fixer",
+
+    "phpmd_executable_path": "/usr/bin/phpmd",
+    "phpmd_run": true,
+    // Execute the phpmd on file save
+    "phpmd_command_on_save": false,
+
+    "phpcs_command_on_save": false,
+
+    // Execute scheck
+    // "scheck_run": true,
+    // "scheck_executable_path": "/opt/pfff/./scheck",
+
+}

@@ -1,0 +1,34 @@
+1. go to ip:8080
+2. manage jenkins -> manage plugins -> update all plugins
+3. GLOBAL Configuration: manage jenkins -> Configure system (see current config in Configure System [Jenkins-Global] .png)
+4. create new project for each repo jenkins -> New Item
+5. choose 'freestyle project' or 'copy existing item'
+6. PROJECT Configuration: go to IP:8080/job/job_name/configure(see current config in Configure System [Jenkins-Job] .png)
+
+
+Project Configuration
+1. project (GITHUB)repo should contain tests/Bootstrap.php file
+in jenkins server /var/lib/jenkins/jobs/job_name/ should contain
+
+build
+    api/
+    build/
+    coverage/
+    docs/
+    logs/
+    pdepend/
+    phpdox/
+    phpcs.xml
+    phpdox.xml
+    phpmd.xml
+    phpunit.xml
+
+build.xml
+
+
+on run, jenkins will create reports in
+
+/var/lib/jenkins/jobs/job_name/htmlreports/ (php documentor)
+/var/lib/jenkins/jobs/job_name/workspace/logs/ (report for each check)
+
+and will update the status on github for current commit

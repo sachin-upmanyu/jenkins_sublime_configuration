@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="../workspace/tests/Bootstrap.php"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         strict="true"
+         verbose="true">
+
+  <testsuites>
+    <testsuite name="ProjectName">
+      <directory suffix="Test.php">../workspace/tests/</directory>
+    </testsuite>
+  </testsuites>
+
+  <logging>
+    <log type="coverage-html" target="../workspace/coverage"/>
+    <log type="coverage-clover" target="../workspace/logs/clover.xml"/>
+    <log type="coverage-crap4j" target="../workspace/logs/crap4j.xml"/>
+    <log type="junit" target="../workspace/logs/junit.xml" logIncompleteSkipped="false"/>
+  </logging>
+
+  <filter>
+    <whitelist addUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">src</directory>
+      <exclude>
+        <file>src/bootstrap.php</file>
+      </exclude>
+    </whitelist>
+  </filter>
+</phpunit>

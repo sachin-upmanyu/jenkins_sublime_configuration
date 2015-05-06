@@ -1,0 +1,26 @@
+Packages:
+
+1. DocBlocker: generates PHPDoc template based on the function --> package:  DocBlockr
+	USE: just above function type /** hit enter
+	wont auto update if function params changed
+
+2. Annotations: highlight TODO, FIXME, README in comment lines --> package:  SublimeLinter-annotations
+
+3. CodeSniffer: CS implementation for ST3 --> package:  sublime-phpcs
+	depends: pear install PHP_CodeSniffer
+	optional modules instt. guide: http://www.ivankristianto.com/use-php-code-sniffer-phpcs-sublimetext-3/
+
+4. package --> SublimeLinter
+
+	SublimeLinter-php
+	SublimeLinter-jshint need--> npm install -g jshint
+	SublimeLinter-csslint need--> npm install -g csslint
+
+5. package --> sftp
+
+6. Anaconda-php: using only phpcpd(copy paste detector), rest functionality same as codesniffer package --> anaconda_php
+    depends: package --> anaconda
+
+
+
+NOTE: check sublime.settings.user and config file for each plugin

@@ -1,0 +1,73 @@
+{
+    "binary_file_patterns":
+    [
+        "*.jpg",
+        "*.jpeg",
+        "*.png",
+        "*.gif",
+        "*.ttf",
+        "*.tga",
+        "*.dds",
+        "*.ico",
+        "*.eot",
+        "*.pdf",
+        "*.swf",
+        "*.jar",
+        "*.zip"
+    ],
+    "bold_folder_labels": true,
+    "color_scheme": "Packages/User/SublimeLinter/IDLE (SL).tmTheme",
+    "copy_with_empty_selection": true,
+    "default_line_ending": "system",
+    "ensure_newline_at_eof_on_save": true,
+    "file_exclude_patterns":
+    [
+        "*.pyc",
+        "*.pyo",
+        "*.exe",
+        "*.dll",
+        "*.obj",
+        "*.o",
+        "*.a",
+        "*.lib",
+        "*.so",
+        "*.dylib",
+        "*.ncb",
+        "*.sdf",
+        "*.suo",
+        "*.pdb",
+        "*.idb",
+        ".DS_Store",
+        "*.class",
+        "*.psd",
+        "*.db",
+        "*.gif",
+        "*.jpeg",
+        "*.jpg",
+        "*.png",
+        "*.ico",
+        "*.sublime-workspace"
+    ],
+    "folder_exclude_patterns":
+    [
+        "images",
+        "img",
+        "fonts",
+        ".svn",
+        ".git",
+        ".hg",
+        "CVS"
+    ],
+    "font_size": 10,
+    "highlight_line": true,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "indent_to_bracket": true,
+    "remember_open_files": true,
+    "shift_tab_unindent": true,
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true,
+    "word_wrap": true
+}
