@@ -1,8 +1,7 @@
 Packages:
 
-1. DocBlocker: generates PHPDoc template based on the function --> package:  DocBlockr
-	USE: just above function type /** hit enter
-	wont auto update if function params changed
+1. DoxyDoxygen: generates PHPDoc template based on the function --> package:  DoxyDoxygen
+	USE: just above function type /** hit enter or alt + Q for auto generation
 
 2. Annotations: highlight TODO, FIXME, README in comment lines --> package:  SublimeLinter-annotations
 
